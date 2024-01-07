@@ -1,0 +1,82 @@
+A BASIC TO-DO WEB APP
+
+HTML :
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter task...">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS :
+style.css
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+JAVASCRIPT :
+script.js
+
+function addTask() {
+  const taskInput = document.getElementById('taskInput');
+  const taskList = document.getElementById('taskList');
+
+  if (taskInput.value !== '') {
+    const taskText = taskInput.value;
+    const listItem = document.createElement('li');
+    listItem.textContent = taskText;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = '❌';
+    deleteButton.onclick = function () {
+      taskList.removeChild(listItem);
+    };
+
+    listItem.appendChild(deleteButton);
+    taskList.appendChild(listItem);
+    taskInput.value = '';
+  }
+}
