@@ -1,0 +1,97 @@
+TRIBUTE WEB PAGE APP 
+
+HTML :
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tribute Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tribute to Someone Special</h1>
+    </header>
+    <main>
+      <div id="tribute-info">
+        <!-- Content will be dynamically loaded here -->
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+CSS :
+style.css
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#tribute-info {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+JAVASCRIPT :
+script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Object containing tribute information
+  const tributeData = {
+    name: "Someone Special",
+    birthDate: "January 1, 1900",
+    deathDate: "December 31, 2000",
+    bio: "This is a brief description or tribute to Someone Special. You can add more details here.",
+    // Add more fields as needed
+  };
+
+  // Function to display tribute information
+  function displayTributeInfo() {
+    const tributeInfo = document.getElementById('tribute-info');
+
+    // Create elements to display tribute information
+    const heading = document.createElement('h2');
+    heading.textContent = tributeData.name;
+
+    const lifespan = document.createElement('p');
+    lifespan.textContent = `(${tributeData.birthDate} - ${tributeData.deathDate})`;
+
+    const bio = document.createElement('p');
+    bio.textContent = tributeData.bio;
+
+    // Append elements to the tribute info container
+    tributeInfo.appendChild(heading);
+    tributeInfo.appendChild(lifespan);
+    tributeInfo.appendChild(bio);
+  }
+
+  // Display the tribute information when the DOM is loaded
+  displayTributeInfo();
+});
