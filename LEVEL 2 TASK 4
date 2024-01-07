@@ -1,0 +1,107 @@
+LOGIN AUTHENTICATION 
+
+HTML :
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message" class="error-message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS :
+style.css
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+
+JAVASCRIPT :
+script.js
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get input values
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  // Your authentication logic here (for demo purposes, let's check for a hardcoded username and password)
+  if (username === 'user' && password === 'password') {
+    // Redirect to a dashboard or authenticated page
+    window.location.href = 'dashboard.html';
+  } else {
+    // Display error message
+    var errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = 'Invalid username or password. Please try again.';
+  }
+});
