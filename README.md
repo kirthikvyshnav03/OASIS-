@@ -1,1 +1,6 @@
-      As an MCA student and aspiring web developer, my objective is to leverage my technical skills, creativity, and dedication to contribute to innovative web development projects. I aim to gain practical experience in the field, collaborate with teams.
+Successfully Completed level 2 Task 1 - CALCULATOR 
+                       level 2 Task 2 - TRIBUTE PAGE
+                       level 2 Task 3 - A BASIC TO DO WEB APP
+                       level 2 Task 4 - LOGIN AUTHENTICATION 
+                       Using HTML CSS AND JAVASCRIPT.                       
+                       
