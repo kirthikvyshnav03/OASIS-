@@ -1,6 +1,2 @@
-Successfully Completed level 2 Task 1 - CALCULATOR 
-                       level 2 Task 2 - TRIBUTE PAGE
-                       level 2 Task 3 - A BASIC TO DO WEB APP
-                       level 2 Task 4 - LOGIN AUTHENTICATION 
-                       Using HTML CSS AND JAVASCRIPT.                       
+Hello !!! Welcome to my Profile. This Repository which I Created for Oasis Infobyte Web Development and Designing Internship tasks. I Choosed Level 2 and it consists of 4 tasks such as Calculator(task 1) , tribute page(task 2) , basic to-do web app(task3) , login authentication(task 4). I divided these tasks as four files and each file(each task) having its code which includes HTML , CSS & JAVASCRIPT Code                     
                        
